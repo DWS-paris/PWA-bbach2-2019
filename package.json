@@ -1,0 +1,29 @@
+{
+  "name": "mean-app-first",
+  "version": "1.0.0",
+  "description": "## Création et utilisation d'un service Angular",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "dev": "cd ANGclient && ng build --output-path ../www --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DWS-paris/mean-ang-w2-2019.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DWS-paris/mean-ang-w2-2019/issues"
+  },
+  "homepage": "https://github.com/DWS-paris/mean-ang-w2-2019#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.0.0",
+    "ejs": "^2.6.1",
+    "express": "^4.17.0",
+    "path": "^0.12.7"
+  }
+}
