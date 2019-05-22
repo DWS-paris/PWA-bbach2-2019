@@ -10,6 +10,47 @@
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"> 
   <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
   <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+
+   <!-- Ajout du manifest (PWA) -->
+   <link rel="manifest" href="manifest.json">
+
+   <!-- Définir le nom de l'application (cf. manifest.json) -->
+   <meta name="application-name" content="New app : resté informé tout le temps">
+
+   <!-- Définir les capacités de la PWA -->
+   <meta name="mobile-web-app-capable" content="yes">
+   <meta name="apple-mobile-web-app-capable" content="yes">
+   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+   <meta name="apple-mobile-web-app-title" content="New app : resté informé tout le temps">
+
+   <!-- Configuration Microsoft -->
+   <meta name="msapplication-navbutton-color" content="#999999">
+   <meta name="msapplication-starturl" content="index.html">
+
+   <!-- Définir la couleur principale de la PWA (cf. manifest.json) -->
+   <meta name="theme-color" content="#999999">
+   
+   <!-- Les icones doivent être communs avec ceux du manifest -->
+   <link rel="icon" sizes="192x192" href="./img/android/android-launchericon-192-192.png">
+   <link rel="icon" sizes="128x128" href="./img/chrome/chrome-installprocess-128-128.png">
+   <link rel="apple-touch-icon" sizes="128x128" href="./img/chrome/chrome-installprocess-128-128.png">
+   <link rel="apple-touch-icon-precomposed" sizes="128x128" href="./img/chrome/chrome-installprocess-128-128.png">
+
+   <!-- Instancier le service-worker -->
+   <script>
+            
+    // Vérifier que le navigateur accepte les service-worker
+    if( 'serviceWorker' in navigator ){
+        try{
+            navigator.serviceWorker.register('service-worker.js');
+            console.log('Service worker registered');
+        }
+        catch(err){
+            console.log('Service worker not registered', err);
+        };
+    };
+</script>
+  
 </head>
 <body>
   <app-root></app-root>
