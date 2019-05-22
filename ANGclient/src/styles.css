@@ -1,0 +1,50 @@
+/* 
+Display
+*/
+ul.categoryList li {
+    display: inline-block;
+    font-size: .6rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: .5rem;
+    border: .1rem solid gray;
+    cursor: pointer;
+}
+
+ul.categoryList li.active{
+    color: white;
+    background-color: grey;
+}
+
+ul.categoryList li:not(:last-of-type){
+    margin-right: 1rem;
+}
+/* */
+
+/* 
+Colors
+*/
+.alimentation{
+    color: red;
+}
+
+.services{
+    color: blue
+}
+
+.beaute--sante-et-bien-etre{
+    color: purple
+}
+
+.restauration{
+    color: yellow
+}
+
+.maison-et-deco{
+    color: blueviolet
+}
+
+.loisirs-et-divertissements{
+    color: brown
+}
+/**/

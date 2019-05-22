@@ -1,0 +1,14 @@
+<header>
+  <h1 [textContent]="title"></h1>
+  <nav>
+    <ul>
+      <li *ngFor="let item of activeNav">
+        <a [routerLink]="item.path" [textContent]="item.value"></a>
+      </li>
+      <li 
+        *ngIf="userIsConnected"
+        (click)="logoutUser()"
+      >Logout</li>
+    </ul>
+  </nav>
+</header>

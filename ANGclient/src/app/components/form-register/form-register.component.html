@@ -1,0 +1,83 @@
+<form 
+  [formGroup]="formData"
+  (submit)="submitForm()"
+>
+  <label for="first_name">Prénom</label>
+  <input 
+    type="text" name="first_name" id="first_name"
+    required minlength="2"
+    formControlName="first_name"
+  >
+
+  <label for="last_name">Nom</label>
+  <input 
+    type="text" name="last_name" id="last_name"
+    required minlength="2"
+    formControlName="last_name"
+  >
+
+  <label for="email">Email</label>
+  <input 
+    type="email" name="email" id="email"
+    required minlength="2"
+    formControlName="email"
+  >
+
+  <label for="password">Mot de passe</label>
+  <input 
+    type="password" name="password" id="password"
+    required minlength="2"
+    formControlName="password"
+  >
+
+  <label for="password_repeate">Répéter le mot de passe</label>
+  <input 
+    type="password" name="password_repeate" id="password_repeate"
+    required minlength="2"
+    formControlName="password_repeate"
+  >
+
+  <label for="street">Adresse</label>
+  <input 
+    type="text" name="street" id="street"
+    required minlength="2"
+    formControlName="street"
+  >
+
+  <label for="city">Ville</label>
+  <input 
+    type="text" name="city" id="city"
+    required minlength="2"
+    formControlName="city"
+  >
+
+  <label for="zip_code">Code postal</label>
+  <input 
+    type="text" name="zip_code" id="zip_code"
+    required minlength="2"
+    formControlName="zip_code"
+  >
+
+  <label for="country">Pays</label>
+  <input 
+    type="text" name="country" id="country"
+    required minlength="2"
+    formControlName="country"
+  >
+
+  <label for="birthdate">Date de naissance</label>
+  <input 
+    type="text" name="birthdate" id="birthdate"
+    required minlength="2"
+    formControlName="birthdate"
+  >
+
+  <label for="type">Profil</label>
+  <select name="type" id="type" formControlName="type">
+    <option *ngFor="let item of ['merchant', 'neighborhood', 'admin']" [value]="item">{{item}}</option>
+  </select>
+
+  <p><input type="checkbox" required formControlName="cgu"> Accépter les CGU</p>
+
+  <button type="submit" [disabled]="!formData.valid">Inscription</button>
+</form>
